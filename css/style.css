@@ -1,0 +1,166 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+@font-face {
+    font-family: 'Bebas';
+    src: url('../fonts/bebasneue_bold-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue_bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Din';
+    src: url('../fonts/din_alternate_bold-webfont.woff2') format('woff2'),
+         url('../fonts/din_alternate_bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Din';
+    src: url('../fonts/DINNextLTPro-Regular.woff2') format('woff2'),
+        url('../fonts/DINNextLTPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.modulo-at {
+	background-color: #ececec;
+	background-position: center center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 467px;
+	width: 700px;
+}	
+
+.modulo-at .modulo-at_inner {
+    color: #fffefe;
+    height: 251px;
+    left: 256px;
+	padding: 10px 5px;
+	position: absolute;
+    text-align: center;
+    top: 87px;
+    width: 380px;
+}
+
+.modulo-at h1 {
+	font-family: Bebas, Arial, sans-serif;
+	letter-spacing: 1px;
+	margin: 0 0 15px;
+}
+
+.modulo-at h1.smaller {
+	font-size: 28px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+.modulo-at h2,
+.modulo-at h3 {
+	font-family: Din, Arial, sans-serif;
+	font-weight: normal;
+	margin: 5px 0;
+	font-size: 25px;
+}
+
+.modulo-at h2.border-bottom {
+	border-bottom: 1px solid white;
+	line-height: 1;
+	min-height: 37px;
+    width: 96%;
+}
+
+.modulo-at h2.border-bottom.border-bottom--big {
+	font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+	min-height: 53px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.modulo-at p {
+	font-family: Trebuchet, Trebuchet MS, Arial, sans-serif;
+	margin: 5px 0;
+	font-size: 12px
+}
+
+.modulo-at h1,
+.modulo-at h2,
+.modulo-at h3,
+.modulo-at p {
+	opacity: 0.9;
+}
+
+.modulo-at p.sub {
+	bottom: 0;
+	font-weight: 200;
+	left: 0;
+	opacity: 0.8;
+	position: absolute;
+	text-align: center;
+	width: calc(100% - 15px);
+}
+
+.modulo-at p.franja {
+	background-color: white;
+    bottom: -6px;
+    color: #333;
+    font-family: Din, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    left: -6px;
+    line-height: 1.15;
+    opacity: 1;
+    padding: 9px 15px;
+    position: absolute;
+    width: 100%;
+}
+
+.modulo-at p.franja.franja--smaller {
+	font-size: 12px;
+    line-height: 1.05;
+}
+
+.modulo-at p.disponible {
+	font-size: 15px;
+    font-family: Din, arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+	margin-top: 8px;
+    width: 97%;
+}
+
+
+
+.form-settings {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: block;
+    margin: 10px auto;
+	max-width: 600px;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+

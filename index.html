@@ -1,0 +1,122 @@
+<!doctype HTML>
+<html>
+<head>
+	<title>Canvas Screenshot</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<form action="" id="opciones" class="form-horizontal form-settings">
+		<h1 style="text-align: center; font-size: 26px; margin: 10px auto 15px; border-bottom: 1px solid #ddd; padding-bottom: 7px;">Generar gráfica Academia Toyota</h1>
+		<div class="form-group">
+			<label for="titulo" class="control-label col-sm-5">Curso</label>
+			<div class="col-sm-7">
+				<input type="text" id="titulo" class="form-control" maxlength="50" placeholder="Título del curso" name="titulo">
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label for="tipo" class="control-label col-sm-5">Área</label>
+			<div class="col-sm-7">
+				<select id="tipo" class="form-control" name="tipo">
+					<option disabled selected>-- Seleccione --</option>
+					<option value="repuestos">Repuestos</option>
+					<option value="servicios">Servicios</option>
+					<option value="ventas">Ventas</option>
+					<option value="todos">Todos</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label for="fecha_inicio" class="control-label col-sm-5">Fecha inicio</label>
+			<div class="col-sm-7">
+				<input type="date" id="fecha_inicio" class="form-control" maxlength="50" name="fecha_inicio">
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label for="fecha_fin" class="control-label col-sm-5">Fecha término</label>
+			<div class="col-sm-7">
+				<input type="date" id="fecha_fin" class="form-control" maxlength="50" name="fecha_fin">
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label for="texto_franja" class="control-label col-sm-5">Texto franja (opcional)</label>
+			<div class="col-sm-7">
+				<textarea id="texto_franja" class="form-control" maxlength="1000" name="texto_franja" placeholder="Dejar en blanco para ignorar y usar por defecto"></textarea>
+			</div>
+		</div>
+		
+		<div class="text-right" style="border-top: 1px solid #ddd; padding-top: 10px;">
+			<button class="btn btn-primary" type="button" id="btn-enviar-opciones">Enviar</button>
+		</div>
+		
+	</form>
+
+	<article id="plantilla-aviso-miercoles" class="modulo-at" style="background-image: url(img/bg.jpg); display: none;">
+		<div class="modulo-at_inner">
+			<h1>YA TIENES<br>INFORMACIÓN DISPONIBLE</h1>
+			<h2>Reporte de Avance<br>Academia Toyota</h2>
+			<h3>{{titulo}}</h3>
+			<p class="sub">* Información actualizada hasta el martes a las 20 hrs.</p>
+		</div>
+	</article>
+	
+	<article id="plantilla-aviso-reporte-final" class="modulo-at" style="background-image: url(img/bg.jpg); display: none;">
+		<div class="modulo-at_inner">
+			<h1>YA TIENES<br>INFORMACIÓN DISPONIBLE</h1>
+			<h2>Reporte Final<br>Academia Toyota</h2>
+			<h3 style="margin-top: 20px;">{{titulo}}</h3>
+		</div>
+	</article>
+	
+	<article id="plantilla-aviso-viernes" class="modulo-at" style="background-image: url(img/bg.jpg); display: none;">
+		<div class="modulo-at_inner">
+			<h1>YA TIENES<br>INFORMACIÓN DISPONIBLE</h1>
+			<h2>Reporte de Avance<br>Academia Toyota</h2>
+			<h3 style="margin-top: 10px;">{{titulo}}</h3>
+			<p class="sub">* Información actualizada hasta el jueves a las 20 hrs.</p>
+		</div>
+	</article>
+	
+	<article id="plantilla-aviso-2-dias" class="modulo-at" style="background-image: url(img/bg2.jpg); display: none;">
+		<div class="modulo-at_inner">
+			<h1 class="smaller">QUEDAN SÓLO 2 DÍAS<br>PARA COMPLETAR EL CURSO</h1>
+			<h2 class="border-bottom">{{titulo}}</h2>
+			<p class="disponible">Disponible entre el:<br>{{fecha_inicio}} y el {{fecha_fin}} hasta las 18:00hrs.</p>
+			<p class="franja">* En Academia Toyota, ir al espacio de búsqueda y escribir <strong>CHILE</strong> luego <strong>Academia Toyota Chile</strong> y a continuación <strong>{{titulo}}</strong></p>
+		</div>
+	</article>
+	
+	<article id="plantilla-aviso-ultimo-dia" class="modulo-at" style="background-image: url(img/bg3.jpg); display: none;">
+		<div class="modulo-at_inner">
+			<h1 class="smaller">MAÑANA ÚLTIMO DÍA<br>PARA COMPLETAR EL CURSO</h1>
+			<h2 class="border-bottom">{{titulo}}</h2>
+			<p class="disponible">Disponible entre el:<br>{{fecha_inicio}} y el {{fecha_fin}} hasta las 18:00hrs.</p>
+			<p class="franja">* En Academia Toyota, ir al espacio de búsqueda y escribir <strong>CHILE</strong> luego <strong>Academia Toyota Chile</strong> y a continuación <strong>{{titulo}}</strong></p>
+		</div>
+	</article>
+	
+	<article id="plantilla-aviso-nuevo-curso" class="modulo-at" style="background-image: url(img/bg4.jpg); display: none;">
+		<div class="modulo-at_inner">
+			<h1 class="smaller">YA HAY UN NUEVO CURSO DISPONIBLE</h1>
+			<h2 class="border-bottom border-bottom--big">{{titulo}}</h2>
+			<p class="disponible">Disponible entre el:<br>{{fecha_inicio}} y el {{fecha_fin}} hasta las 18:00hrs.</p>
+			<p class="franja">* En Academia Toyota, ir al espacio de búsqueda y escribir <strong>CHILE</strong> luego <strong>Academia Toyota Chile</strong> y a continuación <strong>{{titulo}}</strong></p>
+		</div>
+	</article>
+</body>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/html2canvas.min.js"></script>
+<script src="js/base.js"></script>
+<script src="js/functions.js"></script>
+
+
+</html>
