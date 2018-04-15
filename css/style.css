@@ -34,6 +34,41 @@ body {
 	position: relative;
 }
 
+header.fixed-header {
+	background-color: slategray;
+	height: 100%;
+	left: 0;
+	padding: 10px 5px;
+	position: fixed;
+	top: 0;
+	width: 70px;
+	z-index: 999;
+}
+
+header.fixed-header nav a {
+	background-color: rgba(0, 0, 0, 0.14);
+	border: 2px solid #eee;
+	border-radius: 4px;
+	color: white;
+	display: block;
+	font-size: 30px;
+	height: 60px;
+	line-height: 1.2;
+	margin-bottom: 10px;
+	text-align: center;
+	width: 100%;
+}
+
+header.fixed-header nav p {
+	font-size: 8px;
+	margin: 0;
+}
+.main {
+	margin-left: 80px;
+	max-width: calc(100% - 80px);
+	padding: 15px;
+}
+
 .modulo-at {
 	background-color: #ececec;
 	background-position: center center;
@@ -101,14 +136,14 @@ body {
 .modulo-at h2,
 .modulo-at h3,
 .modulo-at p {
-	opacity: 0.9;
+	opacity: 0.95;
 }
 
 .modulo-at p.sub {
 	bottom: 0;
 	font-weight: 200;
 	left: 0;
-	opacity: 0.8;
+	opacity: 0.95;
 	position: absolute;
 	text-align: center;
 	width: calc(100% - 15px);
@@ -143,15 +178,11 @@ body {
     width: 97%;
 }
 
-
-
 .form-settings {
     background-color: #eee;
     border: 1px solid #ddd;
     border-radius: 5px;
     display: block;
-    margin: 10px auto;
-	max-width: 600px;
     padding: 10px;
 }
 

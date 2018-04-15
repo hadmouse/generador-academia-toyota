@@ -745,6 +745,7 @@ function reemplazo_texto(entrada, objeto_reemplazo) {
         }
 		return input;
 	}
+	return entrada;
 }
 //reemplazo endregion
 
